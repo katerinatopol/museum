@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Герой - {{ hero.title}}{% endblock %}
+
+{% block content %}
+    <h2>{{ hero.title }}</h2>
+    <i>{{ hero.date }}</i>
+    <p>{{ hero.text|safe }}</p>
+{% endblock %}

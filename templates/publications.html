@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Публикация - {{title}}{% endblock %}
+
+{% block content %}
+    <h1>Галерея</h1>
+    <table class="content">
+        <thead>
+            <th><b>Номер</b></th>
+            <th><b>Публикация</b></th>
+            <th><b>Дата</b></th>
+        </thead>
+        {%for publication in publications %}
+             <tr>
+                <td>{{ publication.id }}</td>
+                <td><a href="/gallery/{{ publication.id }}">{{ publication.title }}</td>
+                <td>{{ publication.date }}</td>
+             </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

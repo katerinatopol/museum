@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Герои - {{title}}{% endblock %}
+
+{% block content %}
+    <h1>Герои</h1>
+    <table>
+        <thead>
+            <th><b>Номер</b></th>
+            <th><b>Имя</b></th>
+            <th><b>Дата</b></th>
+        </thead>
+        {%for hero in heroes %}
+             <tr>
+                <td>{{ hero.id }}</td>
+                <td><a href="/heroes/{{ hero.id }}">{{ hero.title }}</td>
+                <td>{{ hero.date }}</td>
+             </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

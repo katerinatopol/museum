@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap">
+
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  background-image: url(https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 1px;
+}
+
+
+h1 {
+  text-align: center;
+  color: black;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mini-title {
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  text-decoration: none;
+  color: black;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* разметка меню и всех списков если не исправить */
+ul {
+  list-style: none;
+}
+
+nav {
+  height: 40px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main > li {
+  margin: 0 2%;
+}
+
+.main > li a{
+  height: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+  font-family: 'Cormorant Garamond', serif;
+  display: block;
+  padding: 10px 5px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom:1px solid rgba(192, 192, 192, 100);
+}
+
+a:hover {
+  border-bottom:1px solid rgba(23, 23, 50, 1);
+  border-top:1px solid rgba(23, 23, 50, 1);
+}
+
+.drop li {
+  opacity: 0;
+  transform-origin: top center;
+  border-bottom:1px solid rgba(192, 192, 192, 100);
+}
+
+.drop li a {
+  padding: 10px 0;
+}
+
+.main li:hover .menu3 li:first-of-type {
+  animation: menu3 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+  background-color: #dadada;
+}
+
+.main li:hover .menu3 li:nth-of-type(2) {
+  animation: menu3 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+  background-color: #dadada;
+}
+
+.main li:hover .menu3 li:nth-of-type(3) {
+  animation: menu3 0.3s ease-in-out forwards;
+  animation-delay: 0.9s;
+  background-color: #dadada;
+}
+
+.main li:hover .menu3 li:last-of-type {
+  animation: menu3 0.3s ease-in-out forwards;
+  animation-delay: 0.9s;
+}
+
+@keyframes menu3 {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Оформление главной страницы (блок с фото)*/
+.photo-home {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.home-container {
+        background: white;
+        width: 400px;
+        height: 400px;
+}
+/* Отступ для содержимого сайта*/
+.content {
+  margin: 40px;
+}
+/* страница Детям о войне */
+.aboutwar {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Кнопки на странице Детям о войне */
+.container {
+  position: relative;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 350px;
+  height: 350px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+.img-button {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 0;
+}
+
+.title-button {
+  position: absolute;
+  width: 350px;
+  left: 0;
+  top: 300px;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  z-index: 1;
+  transition: top .5s ease;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.container:hover .title {
+  top: 295px;
+}
+
+.button {
+  position: absolute;
+  width: 200px;
+  left: 0;
+  margin-top: 120px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+  margin-left: 75px;
+  margin-right: 75px;
+
+}
+
+.button a {
+  width: 200px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+  font-family: 'Cormorant Garamond', serif;
+  justify-content: center;
+
+}
+
+.container:hover .button {
+  opacity: 1;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-top: 120px;
+  
+}
+
+.button:hover {
+  /*background: #adadad;*/
+  color: black;
+
+}
+
+
+/* Галлерея рисунков*/
+<!--.table-art {
+  margin: auto;
+}-->
+
+figure {
+  display: inline-block;
+  position: relative;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+}
+
+.div-art {
+   display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+
+/* Для видео */
+.video-films {
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.video-songs {
+
+  display: flex;
+  overflow: auto;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.text-songs {
+  margin-left: 30px;
+  margin-top: 2%;
+}
+
+.text-songs-2 {
+  margin-left: 8%;
+  margin-top: 2%;
+
+}
+
+.box {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  margin-left: 12%
+
+/*Слайдер*/
+
+
+</style>
+
+</head>
+<body>
+    <nav>
+        <ul class="main">
+            <li><a href="/">ГЛАВНАЯ</a></li>
+            <li><a href="/gallery">Галерея</a></li>
+            <li><a href="/heroes">Наши герои</a></li>
+            <li><a href="/art">Детское творчество</a></li>
+            <li><a href="/aboutwar">Детям о войне</a>
+              <ul class="drop menu3">
+                <li><a href="/films">Фильмы о войне</a></li>
+                <li><a href="/excursions">Виртуальные экскурсии</a></li>
+                <li><a href="/songs">Военные песни</a></li>
+              </ul>
+            </li>
+            <li>
+                <a href="/contacts">Внести свой вклад</a>
+            </li>
+        </ul>
+    </nav>
+
+
+        {% block content %}{% endblock %}
+
+</body>
+</html>
+
