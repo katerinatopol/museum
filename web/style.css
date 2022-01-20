@@ -207,6 +207,16 @@ body {
   letter-spacing: normal;
 }
 
+/* Заголовки страниц */
+
+.title {
+  font-size: 38px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 1.2em;
+  text-align: center;
+}
+
 /* Страница ГЛАВНАЯ */
 /* Блок приветствие */
 .welcome {
