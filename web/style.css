@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 /* Убрать подчеркивание всех ссылок */
 a {
   text-decoration: none;
@@ -95,6 +100,14 @@ body {
   min-height: 100%;
   background: url(img/background.jpg);
   background-size: 100%;
+  position: relative;
+}
+
+/* Центрирование для основных блоков */
+.center {
+  width: 980px;
+  margin: 0 auto;
+  height: 100%;
 }
 
 /* Кнопка наверх */
@@ -174,18 +187,119 @@ body {
   margin-top: 0;
 }
 
+/* Футер */
+.footer {
+  background-color: #333333;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  text-align: right;
+}
+
+.footer span {
+  margin-right: 30px;
+  font-size: 12px;
+  vertical-align: middle;
+  color: #cccccc;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* Страница ГЛАВНАЯ */
 /* Блок приветствие */
 .welcome {
-  background: url(img/eternal_flame.jpg);
+  background: url(img/eternal_flame.jpg) no-repeat;
   background-size: 100%;
-  min-height: 412px;
+  max-height: 495px;
+  height: auto;
+  /*width: 100%;*/
   /*max-height: 412px;*/
+  min-width: 1170px;
+  max-width: 1923px;
   margin-top: 10px;
+  /*position: relative;*/
 }
 
 .welcome-block {
-  opacity: 0.46;
-  min-height: 412px;
+  /*opacity: 0.46;*/
+  height: 100%;
+  /*position: absolute;*/
   width: 302px;
-  background-color: #cccccc;
+  background-color: rgba(204, 204, 204, 0.46);
+  text-align: center;
+}
+
+.welcome-1 {
+  vertical-align: baseline;
+  font-size: 34px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  font-family: cormorantgaramond, cormorant garamon, serif;
+  line-height: 1em;
+  text-align: center;
+}
+
+.welcome-2 {
+  vertical-align: baseline;
+  font-size: 47px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  font-family: cormorantgaramond, cormorant garamon, serif;
+  line-height: 1em;
+  text-align: center;
+}
+
+.welcome-3 {
+  vertical-align: baseline;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #cccccc;
+  font-family: cormorantgaramond, cormorant garamon, serif;
+  line-height: 1em;
+  text-align: center;
+}
+
+/* Страница Контакты */
+
+.contacts {
+  opacity: 0.8;
+  background: url(img/paper_sheet_PNG7238.png);
+  width: 600px;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-right: 50px;
+  padding-left: 70px;
+}
+
+.contacts span {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 21px;
+  text-align: center;
+  line-height: 35px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #000000;
+  display: block;
+  text-decoration: none;
+}
+
+.email {
+  margin-top: 30px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 28px;
+  text-align: center;
+  line-height: 35px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #be0404;
+  display: block;
 }
