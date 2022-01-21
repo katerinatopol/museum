@@ -314,6 +314,41 @@ body {
   /*transform: scale(1.01);  Увеличение картинки */
 }
 
+/* Страница ДЕТСКОЕ ТВОРЧЕСТВО */
+.art {
+  margin: 0 auto;
+  text-align: center;
+  /*display: inline-flexbox;*/
+  max-width: 980px;
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-wrap: wrap;
+  flex-direction: column;
+  height: 400px;*/
+}
+
+.art > div {
+  flex: 1 0 25%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.photo {
+}
+
+.art img {
+  margin: 5px; /* внешние отступы картинок */
+  border: 3px solid #fff; /* рамка картинок */
+  width: 300px;
+  min-height: 100px;
+
+  background-color: gray;
+  margin: 4px;
+}
+a.photo:hover img {
+  border: 3px solid #034f80; /* изменение цвета рамки при наведении на картинку */
+}
+
 /* Страница Контакты */
 
 .contacts {
